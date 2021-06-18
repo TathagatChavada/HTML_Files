@@ -1,0 +1,98 @@
+body {
+    margin: 0 auto;
+    background-position:center;
+    background-size: contain;
+}
+
+.menu {
+    position: relative;
+    top: 0;
+    background-color:rgb(5, 177, 5);
+    padding:2px 0px 2px 0px;
+    color:white;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.menu a{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.button {
+    font-size: 16px;
+    color : white;
+    transition-duration: 0.3s;
+}
+
+.b1{
+    color: orange;
+}
+
+.b2{
+    color: green;
+}
+
+.b1:hover{
+    background-color:white;
+    color: green;
+    border-radius: 20px;
+}
+.b2:hover{
+    background-color: white;
+    color: orange;
+    border-radius: 20px;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns:auto auto;
+    padding:10px;
+    grid-gap: 10px;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0px;
+    background-color: #000;
+    color: #fff;
+    position:relative;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    
+}
+
+.items {
+    background-color: rgb(238, 237, 237);
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.i1:hover {
+    background-color: rgb(223, 223, 223);
+
+}
+
+.image:hover {
+    transform-style: preserve-3d;
+    position: relative;  
+    animation:example 5s infinite;
+}
+
+@keyframes example {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(180deg);}   
+}
+.flex {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
