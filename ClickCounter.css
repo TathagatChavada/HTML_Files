@@ -1,0 +1,11 @@
+.border {
+    border-radius: 5px;
+    border-color:"#hex-value";
+    padding: 5px;
+    background-color: rgb(39, 37, 37);
+    color: white;
+}
+
+.Inline {
+    display: inline-block;
+}

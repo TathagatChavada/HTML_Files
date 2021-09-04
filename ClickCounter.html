@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html CSS JavaScript</title>
+
+
+    <link rel="stylesheet" href="ClickCounter.css">
 </head>
 
 <body>
@@ -13,13 +16,25 @@
             Click Counter <br>
             
             <div style="display: inline-block;">
-                <button onclick="decrease()">-</button>
+                <button onclick="decrease()" class="border">-</button>
                 <span id="inc" style="padding: 20px;"> 0 </span> 
-                <button onclick="increase()">+</button>
+                <button onclick="increase()" class="border">+</button>
             </div>
-        </h1>
-    </div>
 
+            <div>
+                <button onclick="resetValue()" class="border">Reset</button>
+            </div>
+            </h1>
+            <br>
+
+            <h1 class="Inline">HEX COLOR: <span id="hex-value">  </span>
+            
+            <div>
+            <button onclick="changeColor()" id="btn" class="border">Change Color</button>
+            </div>
+            </h1>
+        
+    </div>
 
 <script>
     let x = 0;
@@ -33,6 +48,31 @@
         document.getElementById("inc").innerHTML = x;
     }
     
+    function resetValue() {
+        x = 0;
+        document.getElementById("inc").innerHTML = x;
+    }
+
+    function changeColor() {
+        const button = document.querySelector('#btn');
+        const body = document.querySelector('body');
+        const hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        const value = document.querySelector('#hex-value');
+
+        button.addEventListener('click', changeHex);
+
+            function changeHex(){
+                let hex = '#';
+
+                for (let i = 0; i < 6; i++){
+                    const index = Math.floor(Math.random()*hexValues.length);
+                    hex += hexValues[index];
+                }
+                value.textContent = hex;
+                body.style.backgroundColor = hex;
+
+            }
+    }
 </script>
 </body>
 </html>
